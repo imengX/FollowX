@@ -24,10 +24,10 @@ a{
 	height: 100px;
 	text-decoration: none;
 	display: block;	
+	color: blue;
 }
-.my {
-	
-}
+
+
 .my{
 	background: url("../img/tab-icon-mine-sel@2x.png")center no-repeat;
 	background-size:100px;
@@ -59,7 +59,7 @@ a{
 
 }
 span {
-	color: red;
+	
 	font-size: 36px;
 	position: absolute;
 	left: 50%;
@@ -79,6 +79,5 @@ h1{
 }
 .curent{
 	color: #27C7A8;
-	z-index: 10;
-
+	z-index: 1000;
 }
