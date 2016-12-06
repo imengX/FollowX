@@ -3,16 +3,46 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css">
-</head>
+	<link rel="stylesheet" type="text/css" href="css/index.css"></head>
 <body>
 	<div id="app">
+		<div class="header"></div>
+		<component v-bind:is="view"></component>
 		<div class="footer">
-			<div class="my">我的</div>
-			<div class="my">发现</div>
-			<div class="my">搜索</div>
+
+			<ul class="home-type">
+				<li>
+					<a href="" class="my">
+						<img src="img/tab-icon-mine-sel@2x.png" alt="">
+						<span>我的</span>
+					</a>
+				</li>
+				<li>
+					<a href="#/find" class="find">
+						<img src="img/tab-icon-find-nor@2x.png" alt="">
+						<span>发现</span>
+					</a>
+				</li>
+				<li>
+					<a href="#/sech" class="sech">
+						<img src="img/tab-icon-search-nor@2x.png" alt="">
+						<span>搜索</span>
+					</a>
+				</li>
+			</ul>
 		</div>
 
 	</div>
+<script type="text/template" id="tpl_home">
+	<h1>喜欢</h1>
+</script>
+<script type="text/template" id="tpl_find">
+	<h1>发现</h1>
+</script>
+<script type="text/template" id="tpl_sech">
+	<h1>搜索</h1>
+</script>
+	<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
