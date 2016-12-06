@@ -20,32 +20,65 @@
 	
 }
 a{
-
+	
+	height: 100px;
 	text-decoration: none;
+	display: block;	
 }
+.my {
+	
+}
+.my{
+	background: url("../img/tab-icon-mine-sel@2x.png")center no-repeat;
+	background-size:100px;
+	
+	
+	
+}
+.find{
+	background: url("../img/tab-icon-find-nor@2x.png")center no-repeat;
+	background-size:100px ;
+	
+	
+}
+.sech{
+	background: url("../img/tab-icon-search-nor@2x.png")center no-repeat;
+	background-size:100px 100% ;
+	
+}
+
+
 .home-type li {
 	width: 33.33%;
 	float: left;
 	text-align: center;
-	padding-bottom: 10px;
+	padding-bottom: 40px;
+	list-style: none;
+	/*border: 1px solid red;*/
+	position: relative;
+
 }
-.home-type li img{
-	width: 30%;
-	display: block;
-	margin: 0 auto;
-	margin-bottom: 6px;
+span {
+	color: red;
+	font-size: 36px;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	margin-left: -36px;
+
+
+	
 }
-.home-type li span {
-	color: gray;
-	font-size: 30px;
-}
-.home-type li span:nth-child(1){
-	color: blue;
-}
+
 h1{
 	position: absolute;
 	left: 50%;
 	top: 70px;
 	margin-left: -70px;
 	font-size: 70px;
+}
+.curent{
+	color: #27C7A8;
+	z-index: 10;
+
 }
