@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<!-- 新 Bootstrap 核心 CSS 文件 -->
 	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -12,35 +13,71 @@
 	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
 	<script type="text/javascript" src="js/doT.min.js"></script>
-	<style type="text/css">
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/history.css">
 	<title>history</title>
 </head>
 <body>
-<div class="container-fluid">
-	<ul id="history-list"></ul>	
-</div>
+	<div class="header">
+		<div id="app">
+			<component v-bind:is="view"></component>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<ul id="history-list" style="padding-top:64px; padding-bottom:50px;"></ul>
+	</div>
+
+	<div class="footer">
+
+		<ul class="home-type">
+			<li>
+				<a href="" class="tab-item" id="mine">
+					<!-- <img src="img/tab-icon-mine-sel@2x.png" alt=""> -->
+					<span class="tab-icon glyphicon glyphicon-th-list"></span><br/>
+					<span class="tab-text">我的</span>
+				</a>
+			</li>
+			<li>
+				<a href="#/find" class="tab-item" id="find">
+					<!-- <img src="img/tab-icon-find-nor@2x.png" alt="">
+					-->
+					<span class="tab-icon glyphicon glyphicon-asterisk"></span><br/>
+					<span class="tab-text">发现</span>
+				</a>
+			</li>
+			<li>
+				<a href="#/sech" class="tab-item" id="search">
+					<!-- <img src="img/tab-icon-search-nor@2x.png" alt=""> -->
+					<span class="tab-icon glyphicon glyphicon-search"></span>
+					<br/>
+					<span class="tab-text">搜索</span>
+				</a>
+
+			</li>
+		</ul>
+	</div>
+
 </body>
 	<script id="view-item" type="text/x-dot-template">
 		{{~it.subjects :value:index}}
 			<li class="list-unstyled">
 				<a href="{{=value.alt}}">
-					<div style="padding-top: 1em;
-					padding-bottom: 1em; 
-					border-bottom: 1px; 
-					border-bottom-style: solid; 
-					border-bottom-color: #242424" 
+					<div style="padding-top: 1em;\
+					padding-bottom: 1em; \
+					border-bottom: 1px; \
+					border-bottom-style: solid; \
+					border-bottom-color: #242424"
 					class="row">
-						<div class="col-xs-4"><img src={{=value.images.small}}/></div>
-						<div class="col-xs-5">
+						<div class="col-xs-3"><img src='{{=value.images.small}}'/></div>
+						<div class="col-xs-6">
 							<span class=".h1">
 								{{=value.title}}</span>
-							<div style="color: #ae9340;
+							<div style="color: #ae9340;\
 							font-size: 0.5em">
 								每周四更新</div>
-							<span style="width: 2em;
-							height: 2em;
-							border: 1px solid #242424; 
+							<span style="width: 2em;\
+							height: 2em;\
+							border: 1px solid #242424; \
 							background-color: #ececec">
 								10</span>
 							<div style="font-size: 0.8em">
@@ -62,4 +99,17 @@
 			$("#history-list").html(listItem(data));
 		});
 	</script>
+	<!-- 这里是切换H1标签的地方 -->
+	<script type="text/template" id="tpl_home">
+		<h1>喜欢</h1>
+	</script>
+	<script type="text/template" id="tpl_find">
+		<h1>发现</h1>
+	</script>
+	<script type="text/template" id="tpl_sech">
+		<h1>搜索</h1>
+	</script>
+	<script type="text/javascript" src="js/vue.js">					</script>
+	<script type="text/javascript" src="js/jquery.min.js">	</script>
+	<script type="text/javascript" src="js/index.js">				</script>
 </html>

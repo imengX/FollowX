@@ -3,81 +3,97 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css"></head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
+	<!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+</head>
 <body>
 	<div id="app">
-		<div class="header"></div>
-		<component v-bind:is="view"></component>
+		<div class="header">
+			<component v-bind:is="view"></component>
+		</div>
+		<!-- 历史，收藏，缓存 -->
+
+		<div class="container">
+			<div class="history-cell row">
+				<div class="part-left col-xs-3">
+					<img src="http://img3.doubanio.com/img/celebrity/medium/51597.jpg" class="poster">
+				</div>
+				<div class="part-mid col-xs-6">
+					<label class="title">超人大战蝙蝠侠</label><br/>
+					<label class="update-time">每周四更新</label><br/>
+					<ul>
+						<li class="older">&nbsp;11&nbsp;</li>
+						<li>&nbsp;&nbsp;</li>
+						<li class="newer">&nbsp;已更新到12集&nbsp;</li>
+					</ul>
+					<br/>
+					<label class="last">上次观看至第10集 12:12:12</label>
+				</div>
+
+				<div class="part-right col-xs-3">
+					<div class="verti-line"></div>
+					<div class="play-btn">
+						<div class="glyphicon glyphicon-play play"></div>
+						<div class="">
+							继续观看
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
 		<div class="footer">
 
 			<ul class="home-type">
 				<li>
-					<a href="" class="my">
+					<a href="" class="tab-item" id="mine">
 						<!-- <img src="img/tab-icon-mine-sel@2x.png" alt=""> -->
-						<span class="curent my-s">我的</span>
+						<span class="tab-icon glyphicon glyphicon-th-list"></span><br/>
+						<span class="tab-text">我的</span>
 					</a>
 				</li>
 				<li>
-					<a href="#/find" class="find ">
+					<a href="#/find" class="tab-item" id="find">
 						<!-- <img src="img/tab-icon-find-nor@2x.png" alt="">
 						-->
-						<span class="find-s">发现</span>
+						<span class="tab-icon glyphicon glyphicon-asterisk"></span><br/>
+						<span class="tab-text">发现</span>
 					</a>
 				</li>
 				<li>
-					<a href="#/sech" class="sech">
+					<a href="#/sech" class="tab-item" id="search">
 						<!-- <img src="img/tab-icon-search-nor@2x.png" alt=""> -->
-						<span class="sech-s">搜索</span>
+						<span class="tab-icon glyphicon glyphicon-search"></span>
+						<br/>
+						<span class="tab-text">搜索</span>
 					</a>
+
 				</li>
 			</ul>
 		</div>
 
 	</div>
+
+	<!-- 这里是切换H1标签的地方 -->
 	<script type="text/template" id="tpl_home">
-	<h1>喜欢</h1>
-</script>
+		<h1>喜欢</h1>
+	</script>
 	<script type="text/template" id="tpl_find">
-	<h1>发现</h1>
-</script>
+		<h1>发现</h1>
+	</script>
 	<script type="text/template" id="tpl_sech">
-	<h1>搜索</h1>
-</script>
-	<script type="text/javascript" src="js/vue.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript" src="js/jquery.min.js"></script>
+		<h1>搜索</h1>
+	</script>
+	<script type="text/javascript" src="js/vue.js">					</script>
+	<script type="text/javascript" src="js/jquery.min.js">	</script>
+	<script type="text/javascript" src="js/index.js">				</script>
+
 	<script>
-
-		$(".find").click(function(){
-
-	$(this).css("background","url(img/tab-icon-find-sel@2x.png)center no-repeat");
-	$(".my").css("background","url(img/tab-icon-mine-nor@2x.png)center no-repeat");
-	$(".sech").css("background","url(img/tab-icon-search-nor@2x.png)center no-repeat");
-	$(this).css("background-size","100px");
-	$(".my").css("background-size","100px");
-	$(".sech").css("background-size","100px");
-	$(".find-s").addClass("curent");
-	$(".my-s").removeClass("curent");
-	$(".sech-s").removeClass("curent");
-
-
-	 // $('img').attr('src','img/tab-icon-mine-nor@2x.png');
-});
-		
-		$(".sech").click(function(){
-
-	$(this).css("background","url(img/tab-icon-search-sel@2x.png)center no-repeat");
-	$(".my").css("background","url(img/tab-icon-mine-nor@2x.png)center no-repeat");
-	$(".find").css("background","url(img/tab-icon-find-nor@2x.png)center no-repeat");
-	$(this).css("background-size","100px");
-	$(".my").css("background-size","100px");
-	$(".find").css("background-size","100px");
-	$(".sech-s").addClass("curent");
-	$(".find-s").removeClass("curent");
-	$(".my-s").removeClass("curent");
-	 // $('img').attr('src','img/tab-icon-mine-nor@2x.png');
-});
-
-</script>
+	// 切换Tabbar效果
+	</script>
 </body>
 </html>

@@ -3,7 +3,7 @@ var Util = {
 	/**
 	 * 通过id获取模板内容
 	 * @id 		script模板标签id
-	 **/ 
+	 **/
 	tpl: function (id) {
 		// 通过id获取模板内容
 		return document.getElementById(id).innerHTML;
@@ -12,7 +12,7 @@ var Util = {
 	 * 异步请求方法
 	 * @url 	请求地址
 	 * @fn 		请求成功回调函数
-	 */ 
+	 */
 	ajax: function (url, fn) {
 		// 创建xhr对象
 		var xhr = new XMLHttpRequest();
@@ -39,19 +39,19 @@ var HomComponent = Vue.extend({
 	template: Util.tpl('tpl_home')
 
 
-	
+
 })
 // 列表
 var FindComponent = Vue.extend({
 	template: Util.tpl('tpl_find')
 		// 获取父组件传递的search数据
-	
-	
-	
+
+
+
 })
 var SechComponent = Vue.extend({
 	template: Util.tpl('tpl_sech')
-	
+
 })
 // 注册
 Vue.component('home',HomComponent)
@@ -62,9 +62,9 @@ var app = new Vue({
 	el: '#app',
 	data: {
 		view: '',
-		
+
 	},
-	
+
 })
 // 路由
 function router () {
@@ -101,3 +101,21 @@ window.addEventListener('load', router)
 
 // hash改变时候的事件交hashChange事件
 window.addEventListener('hashchange', router)
+
+/// @author XenonChau: 这段是我加的。。。
+$(".document").ready(function(){
+	// tabbar切换更新样式。
+	$("#mine").css("color", "#27C7A8");//默认选中
+	$(".tab-item").click(function(){
+		var tabItemsArray = ["mine","find","search"];
+		for (var idx in tabItemsArray) {
+			var item = tabItemsArray[idx];
+			if ($(this).attr("id") == item) {
+				$(this).css("color", "#27C7A8");
+			} else {
+				var other = "#" + item;
+				$(other).css("color", "#CCCCCC");
+			}
+		}
+	});
+});
