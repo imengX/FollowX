@@ -1,0 +1,34 @@
+<template>
+	<ul id="history-list" style="padding-top:64px; padding-bottom:50px;">
+	<li class="list-unstyled">
+		<!-- <a href="{{=value.alt}}"> -->
+			<div style="padding-top: 1em;\
+			padding-bottom: 1em; \
+			border-bottom: 1px; \
+			border-bottom-style: solid; \
+			border-bottom-color: #242424"
+			class="row">
+				<!-- <div class="col-xs-3"><img src='{{=value.images.small}}'/></div> <!--@author Xenon 这段加了个引号。--> -->
+				<div class="col-xs-6">
+					<!-- <span class=".h1">
+						{{=value.title}}</span> -->
+					<div style="color: #ae9340;\
+					font-size: 0.5em">
+						每周四更新</div>
+					<span style="width: 2em;\
+					height: 2em;\
+					border: 1px solid #242424; \
+					background-color: #ececec">
+						10</span>
+					<div style="font-size: 0.8em">
+						上次观看到第十集
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<span>继续观看</span>
+				</div>
+			</div>
+		<!-- </a> -->
+	</li>
+	</ul>
+</template>
