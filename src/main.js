@@ -3,11 +3,11 @@ import VueRouter from 'vue-router'
 
 import App from './App.vue'
 import History from './components/History.vue';
+import Discover from './components/Discover.vue'
 
 Vue.use(VueRouter)
 
 const Home = { template: '<div>This is Home</div>' }
-const Discover = { template: '<div>This is Foo</div>' }
 const Search = { template: 'abc'}
 // const Bar = { template: '<div>This is Bar {{ $route.params.id }}</div>' }
 
@@ -17,7 +17,7 @@ const router = new VueRouter({
   routes: [
     { path: '/', name: 'history', component: History },
     { path: '/history', name: 'history', component: History },
-    { path: '/discover', name: 'discover', component: History },
+    { path: '/discover', name: 'discover', component: Discover },
     { path: '/search', name: 'search', component: History },
     // { path: '/bar/:id', name: 'bar', component: History }
   ]

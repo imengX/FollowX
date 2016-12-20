@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <AppHeader></AppHeader>
-    <div class="container-fluid">
+    <div class="container-fluid"  style="padding-top:64px; padding-bottom:20px;">
       <router-view class="view"></router-view>
       <!-- <ul id="history-list" style="padding-top:64px; padding-bottom:50px;"></ul> -->
     </div>
