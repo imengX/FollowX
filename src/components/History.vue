@@ -1,34 +1,93 @@
 <template>
-	<ul id="history-list" style="padding-top:64px; padding-bottom:50px;">
-	<li class="list-unstyled">
-		<!-- <a href="{{=value.alt}}"> -->
-			<div style="padding-top: 1em;\
-			padding-bottom: 1em; \
-			border-bottom: 1px; \
-			border-bottom-style: solid; \
-			border-bottom-color: #242424"
-			class="row">
-				<!-- <div class="col-xs-3"><img src='{{=value.images.small}}'/></div> <!--@author Xenon 这段加了个引号。--> -->
-				<div class="col-xs-6">
-					<!-- <span class=".h1">
-						{{=value.title}}</span> -->
-					<div style="color: #ae9340;\
-					font-size: 0.5em">
-						每周四更新</div>
-					<span style="width: 2em;\
-					height: 2em;\
-					border: 1px solid #242424; \
-					background-color: #ececec">
-						10</span>
-					<div style="font-size: 0.8em">
-						上次观看到第十集
-					</div>
-				</div>
-				<div class="col-xs-3">
-					<span>继续观看</span>
-				</div>
-			</div>
-		<!-- </a> -->
-	</li>
-	</ul>
+  <div>
+  <toolbar></toolbar>
+    <ul id="history-list">
+     <li class="list-unstyled">
+       <div class="row">
+         <div class="row-top">
+           <div class="col-xs-3">
+             <img class="img-responsive poster" src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2369036157.jpg">
+           </div>
+           <div class="col-xs-6">
+             <div>
+              <h2 class="movie-name1"><b>大洋之间的灯光</b>
+               <br />
+               <small class="movie-name2">每周四更新</small>
+             </h2>  
+           </div>
+           <div class="button1">
+             <button type="button" class=" btn button-visited">10</button>
+             <button type="button" class=" btn button-visited">12</button>
+           </div>
+           <div class="history">上次观看至第10集 12:12:12</div>
+         </div>
+       </div>
+       <div class="col-xs-3 watch">
+        <img class="img-responsive" src="img/mine-history-btn-watch-nor@3x.png">
+      </div>
+      <hr/>
+    </div>
+  </li>
+</ul>
+</div>
 </template>
+
+<script type="text/javascript">
+  import toolbar from './HistoryToolbar.vue'
+
+  export default {
+    name: 'history',
+    components:{
+      toolbar,
+    }
+  }
+</script>
+
+<style type="text/css">
+  .button-visited{
+    background-color: #ececec;
+    border-radius: 0px;
+    color: #000000;
+/*    width: 36px; 
+    padding-left:7px;
+    */    text-align:center;
+  }
+
+  .button-update{
+    background-color: #29c8a8;
+    border-radius: 0px;
+    color: #ffffff;
+  }
+
+  .poster{
+    margin-left: 13px;
+    /*width:86px;*/
+    /*height:117px;*/
+  }
+
+  .row-top{
+    margin-top: 17px;
+  }
+
+  .movie-name1{
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  .movie-name2{
+    color:#ae9340;
+    position: relative;
+    top: 6px;
+  }
+
+  .history{
+    font-size: 12px;
+    padding-top: 5px;
+  }
+
+  .watch{
+    /*position: relative;*/
+    /*top: -12px*/
+  }
+
+</style>
