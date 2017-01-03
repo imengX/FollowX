@@ -21,7 +21,8 @@
 				<router-link :to="{ name: 'search' }">
 					<span class="tab-icon glyphicon glyphicon-search"></span>
 					<br/>
-					<span class="tab-text" v-model="appTitle">搜索</span>
+					<span class="tab-text">搜索</span>
+					<!-- <span class="tab-text" v-model="appTitle">搜索</span> -->
 				</router-link>
 			</div>
 		</li>
@@ -29,7 +30,6 @@
 </template>
 
 <style>
-
 	.TabBar{
 		height: 50px;
 		width: 100%;
@@ -42,6 +42,7 @@
 	}
 	.TabBar li {
 		width: 33.33%;
+		/*height: 100%;*/
 		float: left;
 		text-align: center;
 		list-style: none;
@@ -52,10 +53,16 @@
 		text-align: center;
 		bottom: 0;
 		height: 100%;
+		width: 100%;
 		color: #cccccc;
+	}
+	
+	.tab-item span {
+		width: 100%;
 	}
 
 	.tab-item a {
+		width: 100%;
 		text-decoration: none;
 	}
 
