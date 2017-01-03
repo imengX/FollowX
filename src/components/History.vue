@@ -1,34 +1,36 @@
 <template>
   <div>
-  <toolbar></toolbar>
-    <ul id="history-list">
-     <li class="list-unstyled">
-       <div class="row">
-         <div class="row-top">
-           <div class="col-xs-3">
-             <img class="img-responsive poster" src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2369036157.jpg">
+    <toolbar></toolbar>
+    <div class="container-fluid">
+      <ul id="history-list">
+       <li class="list-unstyled">
+         <div class="row">
+           <div class="row-top">
+             <div class="col-xs-3">
+               <img class="img-responsive poster" src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2369036157.jpg">
+             </div>
+             <div class="col-xs-6">
+               <div>
+                <h2 class="movie-name1"><b>大洋之间的灯光</b>
+                 <br />
+                 <small class="movie-name2">每周四更新</small>
+               </h2>  
+             </div>
+             <div class="button1">
+               <button type="button" class=" btn button-visited">10</button>
+               <button type="button" class=" btn button-visited">12</button>
+             </div>
+             <div class="history">上次观看至第10集 12:12:12</div>
            </div>
-           <div class="col-xs-6">
-             <div>
-              <h2 class="movie-name1"><b>大洋之间的灯光</b>
-               <br />
-               <small class="movie-name2">每周四更新</small>
-             </h2>  
-           </div>
-           <div class="button1">
-             <button type="button" class=" btn button-visited">10</button>
-             <button type="button" class=" btn button-visited">12</button>
-           </div>
-           <div class="history">上次观看至第10集 12:12:12</div>
          </div>
-       </div>
-       <div class="col-xs-3 watch">
-        <img class="img-responsive" src="img/mine-history-btn-watch-nor@3x.png">
+         <div class="col-xs-3 watch">
+          <img class="img-responsive" src="img/mine-history-btn-watch-nor@3x.png">
+        </div>
+        <hr/>
       </div>
-      <hr/>
-    </div>
-  </li>
-</ul>
+    </li>
+  </ul>
+</div>
 </div>
 </template>
 
