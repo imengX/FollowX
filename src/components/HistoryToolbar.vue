@@ -1,19 +1,18 @@
 <template>
   <ul class="toolbar">
-    <li><a href="#home">历史</a></li>
-    <li><a href="#news">收藏</a></li>
-    <li><a href="#contact">缓存</a></li>
+    <li><a href="#home">历史</li></a>
+    <li><a href="#news">收藏</li></a>
+    <li><a href="#contact">缓存</li></a>
   </ul>
 </template>
 
 <style type="text/css">
   .toolbar{
     list-style-type:none;
-    /*margin:0px 20px;*/
-    padding:6px 20px;
-    padding-top:6px;
-    padding-bottom:6px;
+    margin: 0px;
+    padding: 6px 20px;
     width: 100%;
+    height: 50px;
   }
 
   .toolbar li{
