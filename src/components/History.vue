@@ -24,7 +24,7 @@
            </div>
          </div>
          <div class="col-xs-3 watch">
-          <img class="img-responsive" src="img/mine-history-btn-watch-nor@3x.png">
+          <img class="img-responsive" src="./img/mine-history-btn-watch-nor@3x.png">
         </div>
         <hr/>
       </div>
