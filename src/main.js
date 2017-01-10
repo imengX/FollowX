@@ -2,7 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import App from './App.vue'
-import History from './components/History.vue';
+import Mine from './components/Mine.vue'
+import History from './components/mine/History.vue';
+
 import Discover from './components/Discover.vue'
 
 Vue.use(VueRouter)
@@ -15,7 +17,20 @@ const router = new VueRouter({
   mode: 'history',
   base: __dirname,
   routes: [
-    { path: '/', name: 'history', component: History },
+    { path: '/mine', name: 'mine', component: Mine , alias: '',
+      children: [
+        {
+          path: '',
+          component: History
+        },
+        {
+          // 当 /mine/history 匹配成功，
+          // history 会被渲染在 mine 的 <router-view> 中
+          path: 'history',
+          component: History,
+        }
+      ]
+    },
     { path: '/discover', name: 'discover', component: Discover },
     { path: '/search', name: 'search', component: History },
     // { path: '/bar/:id', name: 'bar', component: History }

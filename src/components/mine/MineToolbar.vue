@@ -1,8 +1,14 @@
 <template>
   <ul class="toolbar">
-    <li><a href="#home">历史</li></a>
-    <li><a href="#news">收藏</li></a>
-    <li><a href="#contact">缓存</li></a>
+    <li>
+      <router-link :to="{ path: '/mine/history'}">历史</router-link>
+    </li>
+    <li>
+      <router-link :to="{ path: ''}">收藏</router-link>
+    </li>
+    <li>
+      <router-link :to="{ path: ''}">缓存</router-link>
+    </li>
   </ul>
 </template>
 

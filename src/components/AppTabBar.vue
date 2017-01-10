@@ -1,8 +1,9 @@
 <template>
 	<ul class="TabBar">
 		<li>
-			<div class="tab-item" id="history">
-				<router-link :to="{ name: 'history' }">
+			<div class="tab-item" id="mine">
+				<!-- <router-link :to="{ name: 'mine' }"> -->
+				<router-link to="/mine">
 					<span class="tab-icon glyphicon glyphicon-th-list"></span><br/>
 					<span class="tab-text">我的</span>
 				</router>
@@ -10,7 +11,7 @@
 		</li>
 		<li>
 			<div class="tab-item" id="discover">
-				<router-link :to="{ name: 'discover' }">
+				<router-link to="/discover">
 					<span class="tab-icon glyphicon glyphicon-asterisk"></span><br/>
 					<span class="tab-text">发现</span>
 				</router>
@@ -18,7 +19,7 @@
 		</li>
 		<li>
 			<div class="tab-item" id="search">
-				<router-link :to="{ name: 'search' }">
+				<router-link to="/search">
 					<span class="tab-icon glyphicon glyphicon-search"></span>
 					<br/>
 					<span class="tab-text">搜索</span>

@@ -9,13 +9,15 @@ export default {
   name: 'AppHeader',
   data () {
     return {
-      appTitle: ''
+      appTitle: 'FollowX'
     }
   }
 }
 </script>
 <style>
 .navigationBar{
+  text-align: center;
+  color: white;
 	width: 100%;
 	height: 64px;
 	background-color: #27C7A8;
