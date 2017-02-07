@@ -28,6 +28,14 @@ const router = new VueRouter({
           // history 会被渲染在 mine 的 <router-view> 中
           path: 'history',
           component: History,
+        },
+        {
+          path: 'collection',
+          component: History,
+        },
+        {
+          path: 'cache',
+          component: History,
         }
       ]
     },

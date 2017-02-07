@@ -4,10 +4,10 @@
       <router-link :to="{ path: '/mine/history'}">历史</router-link>
     </li>
     <li>
-      <router-link :to="{ path: ''}">收藏</router-link>
+      <router-link :to="{ path: '/mine/collection'}">收藏</router-link>
     </li>
     <li>
-      <router-link :to="{ path: ''}">缓存</router-link>
+      <router-link :to="{ path: '/mine/cache'}">缓存</router-link>
     </li>
   </ul>
 </template>
@@ -29,7 +29,23 @@
     position: relative;
   }
 
-  .toolbar a:link,a:visited{
+  .toolbar a.router-link-active {
+    color: #ae9340;
+  }
+
+  .toolbar a {
+    display:block;
+    padding: 0.5em 0em;
+    width:100%;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    text-align:center;
+    text-decoration:none;
+    background-color:#ffffff;
+    color: #a1a1a1;
+  }
+
+/*  .toolbar a:link,a:visited{
     color:#a1a1a1;
     background-color:#ffffff;
     text-align:center;
@@ -42,11 +58,6 @@
     color: #ae9340;
     border-bottom-color: #ae9340;
     text-decoration:none;
-  }
+  }*/
 
-  .toolbar a{
-    display:block;
-    padding: 0.5em 0em;
-    width:100%;
-  }
 </style>

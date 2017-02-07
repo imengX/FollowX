@@ -65,13 +65,18 @@
 	.tab-item a {
 		width: 100%;
 		text-decoration: none;
+		color:#cccccc;
 	}
 
-	.tab-item a:link,a:visited{
+	.tab-item a.router-link-active {
+		color:#29c8a8;
+	}
+
+	/*.tab-item a:link,a:visited{
 		color:#29c8a8;
 		text-align:center;
 		text-decoration:none;
-	}
+	}*/
 
 	.tab-item a:hover,a:active{
 		color: #29c8a8;
