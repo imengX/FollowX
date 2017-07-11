@@ -19,11 +19,10 @@ var bannerPlugin = new webpack.BannerPlugin(
 function getBaseConfig () {
   return {
     entry: {
-      // app: path.resolve('./app.js')
-      'index': path.resolve('src', 'main.js')
+      app: path.resolve('src', 'main.js')
     },
     output: {
-      path: 'dist',
+      path: path.resolve(__dirname, 'dist')
     },
     module: {
       // // You can use ESLint now!

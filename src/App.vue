@@ -3,6 +3,7 @@
     <AppHeader></AppHeader>
     <router-view class="view" style="padding-top:64px; padding-bottom:20px;"></router-view>
     <AppTabBar></AppTabBar>
+    abcdefg
   </div>
 </template>
 

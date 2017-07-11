@@ -54,5 +54,3 @@ new Vue({
   router,
   render: h => h(App)
 })
-
-router.push('discover')
