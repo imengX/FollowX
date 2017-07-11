@@ -3,28 +3,27 @@
 		<li>
 			<div class="tab-item" id="mine">
 				<!-- <router-link :to="{ name: 'mine' }"> -->
-				<router-link to="/mine">
+<!-- 				<router-link to="/mine">
 					<span class="tab-icon glyphicon glyphicon-th-list"></span><br/>
 					<span class="tab-text">我的</span>
 				</router>
-			</div>
+ -->			</div>
 		</li>
 		<li>
 			<div class="tab-item" id="discover">
-				<router-link to="/discover">
+<!-- 				<router-link to="/discover">
 					<span class="tab-icon glyphicon glyphicon-asterisk"></span><br/>
 					<span class="tab-text">发现</span>
-				</router>
+				</router> -->
 			</div>
 		</li>
 		<li>
 			<div class="tab-item" id="search">
-				<router-link to="/search">
+<!-- 				<router-link to="/search">
 					<span class="tab-icon glyphicon glyphicon-search"></span>
 					<br/>
 					<span class="tab-text">搜索</span>
-					<!-- <span class="tab-text" v-model="appTitle">搜索</span> -->
-				</router-link>
+				</router-link> -->
 			</div>
 		</li>
 	</ul>

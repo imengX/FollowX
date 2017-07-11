@@ -5,7 +5,7 @@
        <div class="row">
          <div class="row-top">
            <div class="col-xs-3">
-             <img class="img-responsive poster" src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2369036157.jpg">
+             <image class="img-responsive poster" src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2369036157.jpg"></image>
            </div>
            <div class="col-xs-6">
              <div>
@@ -22,7 +22,7 @@
          </div>
        </div>
        <div class="col-xs-3 watch">
-        <img class="img-responsive" src="/img/mine-history-btn-watch-nor@3x.png">
+        <image class="img-responsive" src="/img/mine-history-btn-watch-nor@3x.png"></image>
       </div>
       <hr/>
     </div>

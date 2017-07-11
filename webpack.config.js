@@ -1,72 +1,90 @@
+// You can install more packages below to config more as you like:
+// eslint
+// babel-eslint
+// eslint-config-standard
+// eslint-loader
+// eslint-plugin-html
+// eslint-plugin-promise
+// eslint-plugin-standard
+// postcss-cssnext
+
 var path = require('path')
 var webpack = require('webpack')
 
-module.exports = {
-  entry: './src/main.js',
-  output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
-    filename: 'build.js'
-  },
-  module: {
-    rules: [
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          loaders: {
-            // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-            // the "scss" and "sass" values for the lang attribute to the right configs here.
-            // other preprocessors should work out of the box, no loader config like this nessessary.
-            'scss': 'vue-style-loader!css-loader!sass-loader',
-            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
-          }
-          // other vue-loader options go here
+var bannerPlugin = new webpack.BannerPlugin(
+  '// { "framework": "Vue" }\n',
+  { raw: true }
+)
+
+function getBaseConfig () {
+  return {
+    entry: {
+      // app: path.resolve('./app.js')
+      'index': path.resolve('src', 'main.js')
+    },
+    output: {
+      path: 'dist',
+    },
+    module: {
+      // // You can use ESLint now!
+      // // Please:
+      // // 1. npm install {
+      // //   babel-eslint
+      // //   eslint
+      // //   eslint-config-standard
+      // //   eslint-loader
+      // //   eslint-plugin-html
+      // //   eslint-plugin-promise
+      // // } --save-dev
+      // // 2. set .eslintrc
+      // //   take { "extends": "standard" } for example
+      // //   so you need: npm install eslint-plugin-standard --save-dev
+      // // 3. set the config below
+      // preLoaders: [
+      //   {
+      //     test: /\.vue$/,
+      //     loader: 'eslint',
+      //     exclude: /node_modules/
+      //   },
+      //   {
+      //     test: /\.js$/,
+      //     loader: 'eslint',
+      //     exclude: /node_modules/
+      //   }
+      // ],
+      loaders: [
+        {
+          test: /\.js$/,
+          loader: 'babel',
+          exclude: /node_modules/
+        }, {
+          test: /\.vue(\?[^?]+)?$/,
+          loaders: []
         }
-      },
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]?[hash]'
-        }
-      }
-    ]
-  },
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.common.js'
-    }
-  },
-  devServer: {
-    historyApiFallback: true,
-    noInfo: true
-  },
-  devtool: '#eval-source-map'
+      ]
+    },
+    vue: {
+      // // You can use PostCSS now!
+      // // Take cssnext for example:
+      // // 1. npm install postcss-cssnext --save-dev
+      // // 2. write `var cssnext = require('postcss-cssnext')` at the top
+      // // 3. set the config below
+      // postcss: [cssnext({
+      //   features: {
+      //     autoprefixer: false
+      //   }
+      // })]
+    },
+    plugins: [bannerPlugin]
+  }
 }
 
-if (process.env.NODE_ENV === 'production') {
-  module.exports.devtool = '#source-map'
-  // http://vue-loader.vuejs.org/en/workflow/production.html
-  module.exports.plugins = (module.exports.plugins || []).concat([
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false
-      }
-    }),
-    new webpack.LoaderOptionsPlugin({
-      minimize: true
-    })
-  ])
-}
+var webConfig = getBaseConfig()
+webConfig.output.filename = '[name].web.js'
+webConfig.module.loaders[1].loaders.push('vue')
+
+var weexConfig = getBaseConfig()
+weexConfig.output.filename = '[name].weex.js'
+weexConfig.module.loaders[1].loaders.push('weex')
+
+module.exports = [webConfig, weexConfig]

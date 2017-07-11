@@ -42,6 +42,7 @@ const router = new VueRouter({
     { path: '/discover', name: 'discover', component: Discover },
     { path: '/search', name: 'search', component: History },
     // { path: '/bar/:id', name: 'bar', component: History }
+    { path: '/', redirect: '/mine/history' }
   ]
 })
 
@@ -53,3 +54,5 @@ new Vue({
   router,
   render: h => h(App)
 })
+
+router.push('discover')

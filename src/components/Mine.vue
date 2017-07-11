@@ -2,7 +2,7 @@
 	<div>
 		<toolbar></toolbar>
 	    <router-view></router-view>
-    </div>>
+    </div>
 </template>
 
 <script type="text/javascript">

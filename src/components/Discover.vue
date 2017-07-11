@@ -2,11 +2,10 @@
 	<div class="view-padding">
 		<div style="width: 100px">
 			<div class="words">更新到12集</div>
-			<img class="img" src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2369036157.jpg"/>  
+			<image class="img" src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2369036157.jpg"></image>
 		</div>
-		<p class="movie-name"><b>大洋之间的灯光</b><br>
-			<small class="movie-history">观看至12集</small>
-		</p>
+		<p class="movie-name"><b>大洋之间的灯光</b></p>
+		<p><small class="movie-history">观看至12集</small></p>
 		<hr/>
 	</div>
 </template>
