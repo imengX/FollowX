@@ -1,0 +1,6 @@
+framework module Pods_FollowX {
+  umbrella header "Pods-FollowX-umbrella.h"
+
+  export *
+  module * { export * }
+}
