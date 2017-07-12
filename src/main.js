@@ -47,7 +47,7 @@ const router = new VueRouter({
 })
 
 new Vue({
-  el: '#app',
+  el: '#root',
   data: {
     appTitle: 'Hello Vue!'
   },

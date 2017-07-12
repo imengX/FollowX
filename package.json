@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "build": "webpack",
-    "dev": "webpack --watch",
+    "dev": "webpack-dev-server --open --inline --hot",
     "copy:ios": "cp dist/index.weex.js ios/assets/index.js",
     "serve": "node build/init.js && serve -p 8080",
     "debug": "weex-devtool"
@@ -33,6 +33,7 @@
     "vue-loader": "^10.0.2",
     "vue-template-compiler": "^2.1.8",
     "webpack": "^1.14.0",
+    "webpack-dev-server": "^2.5.1",
     "weex-devtool": "^0.2.64",
     "weex-loader": "^0.4.4",
     "weex-vue-loader": "^0.2.5"
