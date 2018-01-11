@@ -9,7 +9,7 @@
   import toolbar from './mine/MineToolbar.vue'
 
   export default {
-    name: 'mine',
+    // name: 'mine',
     components:{
       toolbar
     }
